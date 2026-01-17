@@ -2,10 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
   {{ "Hi Team, we are learning - " }} {{ "Helm" }}
   {{ .Values.customblock.author.address }}
-  {{ .Values.customblock.author.email | default "Hi, I am not null" }}
-  {{ .Values.customblock.author.address | default "Hi, I am not null" }}
-  {{ .Values.customblock.author.address | default "Hi, I am not null" | upper }}
-  {{ .Values.customblock.author.address | default "Hi, I am not null" | upper | quote }}
+  {{ .Values.customblock.author.email | default "Hi, I am not null" | nindent 2}}
+  {{ .Values.customblock.author.address | default "Hi, I am not null" | nindent 4 }}
+  {{ .Values.customblock.author.address | default "Hi, I am not null" | upper | nindent 6  }}
+  {{ .Values.customblock.author.address | default "Hi, I am not null" | upper | quote | nindent 8}}
+
 
 metadata:
   name: {{ include "my-first-chart.fullname" . }}
