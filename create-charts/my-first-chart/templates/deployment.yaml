@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
-{{- with .Values.customblock.author.name}}     
-author: 
-{{- toYaml . | nindent 4 }}                  
-{{- else}}
-{{"Hi, I am without with block." | nindent 4}}
+{{ $myVar := true }}
+{{- if $myVar}}
+{{ "Hi, I am with a variable true" | nindent 4 }}
+{{- else }}
+{{ "Hi, I am with a variable false" | nindent 4 }}
 {{- end}}
 
 metadata:
