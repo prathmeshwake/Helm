@@ -1,6 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
   {{"Hi Team, we are learning - "}}, {{"Helm"}}
+  {{.Values.Customblock.Author.Address}}
+  {{.Values.Customblock.Author.Addresss | default "Hi, I am not null"}} 
+  {{.Values.Customblock.Author.Address | default "Hi, I am not null"}} 
+  {{.Values.Customblock.Author.Address | default "Hi, I am not null" | upper}} 
+  {{.Values.Customblock.Author.Address | default "Hi, I am not null" | upper | quote}} 
 metadata:
   name: {{ include "my-first-chart.fullname" . }}
   labels:
