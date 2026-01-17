@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
-  {{ -if .Values.customblock.author.name}}
+  {{- if .Values.customblock.author.name}}
   {{"custom value is present | nindent 6"}}
   {{- end}}
 metadata:
