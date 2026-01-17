@@ -4,7 +4,7 @@ kind: Deployment
 author: 
 {{- toYaml . | nindent 4 }}                  
 {{- else}}
-{{"Hi, I am without with block." | mindent 4}}
+{{"Hi, I am without with block." | nindent 4}}
 {{- end}}
 
 metadata:
