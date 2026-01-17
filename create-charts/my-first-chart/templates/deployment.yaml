@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
   {{"Hi Team, we are learning - "}}, {{"Helm"}}
   {{.Values.Customblock.Author.Address}}
-  {{.Values.Customblock.Author.email | default "Hi, I am not null"}} 
+  {{.Values.Customblock.Author.Email | default "Hi, I am not null"}} 
   {{.Values.Customblock.Author.Address | default "Hi, I am not null"}} 
   {{.Values.Customblock.Author.Address | default "Hi, I am not null" | upper}} 
   {{.Values.Customblock.Author.Address | default "Hi, I am not null" | upper | quote}} 
