@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
   {{- if .Values.customblock.author.name}}
   {{"custom value is present" | nindent 6}}
-  {{- else .values.customblock.author.name}}
+  {{- else}}
   {{"custom value is false" | nindent 4}}
   {{- end}}
 metadata:
