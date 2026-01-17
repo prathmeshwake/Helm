@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
-{{- with .values.customblock.author.name}}     #to read the values from name array
+{{- with .Values.customblock.author.name}}     #to read the values from name array
 {{- toYaml . | nindent 4 }}                      #to write/ print all the names
 {{- end}}
 
