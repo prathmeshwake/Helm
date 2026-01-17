@@ -1,10 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
-  {{- if .Values.customblock.author.name}}
-  {{"custom value is present" | nindent 6}}
-  {{- else}}
-  {{"custom value is false" | nindent 4}}
+  {{- with .Values.customblock.author.name}}     #to read the values from name array
+  {{- to.Yaml . | nindent 4 }}                      #to write/ print all the names
   {{- end}}
+
 metadata:
   name: {{ include "my-first-chart.fullname" . }}
   labels:
