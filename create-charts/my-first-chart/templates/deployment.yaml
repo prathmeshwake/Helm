@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
-  {{- with .Values.customblock.author.name}}     #to read the values from name array
-  {{- toYaml . | nindent 4 }}                      #to write/ print all the names
-  {{- end}}
+{{- with .values.customblock.author.name}}     #to read the values from name array
+{{- toYaml . | nindent 4 }}                      #to write/ print all the names
+{{- end}}
 
 metadata:
   name: {{ include "my-first-chart.fullname" . }}
